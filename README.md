@@ -1,4 +1,6 @@
-# Luke's Edits *Remove after reading/applying to your Repository* 
+```
+Luke's Edits 
+*Remove after reading/applying to your Repository* 
 
 Upon viewing the theme, what the following was identified: 
 * Missing a stylesheet
