@@ -1,0 +1,12 @@
+{
+  "normalStoreUrl": "https://ssbsetups.mybigcommerce.com",
+  "port": "3000",
+  "clientId": "evmwjw0ntlnb9nxfbtbl2ar5mm6h1ta",
+  "accessToken": "l3q4tnakknyoyqd5v8uhyatt5hzgtw2",
+  "customLayouts": {
+    "brand": {},
+    "category": {},
+    "page": {},
+    "product": {}
+  }
+}
