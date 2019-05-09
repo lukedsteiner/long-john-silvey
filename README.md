@@ -9,7 +9,7 @@ My first step to engage with this was to load the site (localhost:3000) was to v
 
 From here, I viewed the page source. I found first that a lot of the expected header information was missing, but no CSS. Once I scrolled to the bottom, I located the following code: 
 
-  ```      <style>
+*/       <style>
             body {
            width: 100%;
            height: 100%;
@@ -19,13 +19,13 @@ From here, I viewed the page source. I found first that a lot of the expected he
            -o-transform: rotate(180deg);
            transform: rotate(180deg);
         }
-        </style> ```
+        </style>
         
  From here, I located the file, using XCode, which is under Templates > Components > Common > Footer.html, and removed the code. (Lines 92-102) 
  
  Next, I move to engage with the missing stylesheet. I have a feeling like it has to do with the header as I noted, but the Header file in that templates directory is normal. I then moved to look at Stencil CLI, which was running the site, and saw an error denoting that the file does not exist. When I navigated to the directory, I found that was absolutely correct, and so I copied over the example header from the most recent version of Cornerstone. From there, the stylesheet remained missing; however, the error in Stencil changed to "Error: no mixin names lazy-loaded-img", which noted line 168 as the corresponding space:
  
- ```{ Error: no mixin named lazy-loaded-img
+ { Error: no mixin named lazy-loaded-img
 
 Backtrace:
 	layouts/header/header.scss:168
@@ -35,7 +35,7 @@ Backtrace:
   column: 14,
   line: 168,
   file: 'layouts/header/header.scss',
-  status: 1 }```
+  status: 1 >
   
 Notice, it back traced to the file layouts/header/header.scss, and so when I move to the directory Assets > scss > layouts > header > header.scss, and edited the file. Upon removing line 168, which notes a call to load lazy-loaded-img (which doesn't exist) the stylesheet was applied to the site.
  
@@ -46,7 +46,7 @@ Notice, it back traced to the file layouts/header/header.scss, and so when I mov
  Upon opening this file, under Assets > scss > layouts > body > _body.scss, I was able to see that the syntax was all "greyed," which indicates that it is commented out. This basically means that there are symbols before and/or after that are breaking the syntax, so that it does not run. By removing the */ from the front, and /* from the back, I fixed the syntax, and the white space was cleared. 
 
 Moving forward, feel free to download this version of the theme, or make the changes I noted above. If you wish to be walked through how I troubleshooted this, and how I used the tools noted here, please come to my training with your peers on 5/10, in Missile Command, at 11AM. 
-
+```
 # Cornerstone
 [![Build Status](https://travis-ci.org/bigcommerce/cornerstone.svg?branch=master)](https://travis-ci.org/bigcommerce/cornerstone)
 
